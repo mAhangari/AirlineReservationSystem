@@ -1,24 +1,16 @@
 package ir.airline.domain;
 
 import ir.baseCRUD.domain.enumeration.UserType;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
 @Setter
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
 public class Customer extends User {
-
-	private static final String NATIONAL_CODE = "national_code";
-
-	@Column(name = NATIONAL_CODE, nullable = false, unique = true)
-	private String nationalCode;
 
 	public Customer(String username, String password, String firstName,
 			String lastName, String nationalCode) {
@@ -26,7 +18,7 @@ public class Customer extends User {
 		super.setPassword(password);
 		super.setFirstName(firstName);
 		super.setLastName(lastName);
-		this.setNationalCode(nationalCode);
+		super.setNationalCode(nationalCode);
 		super.setUserType(UserType.Customer);
 	}
 	
