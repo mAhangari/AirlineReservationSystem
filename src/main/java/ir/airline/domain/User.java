@@ -30,6 +30,7 @@ public class User extends BaseEntity<Long> implements IUser {
     private static final String USER_ID = "user_id";
     private static final String IS_ACTIVE = "is_active";
     private static final String LOGGED_IN = "logged_in";
+    private static final String NATIONAL_CODE = "national_code";
 
     @Column(name = FIRST_NAME)
     private String firstName;
@@ -59,6 +60,9 @@ public class User extends BaseEntity<Long> implements IUser {
 
     @Column(name = BIRTH_DATE)
     private ZonedDateTime birthDate;
+
+    @Column(name = NATIONAL_CODE, nullable = false, unique = true)
+    private String nationalCode;
 
     @Column(name = IS_ACTIVE)
     private boolean isActive = true;
