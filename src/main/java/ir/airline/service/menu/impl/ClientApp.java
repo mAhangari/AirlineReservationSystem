@@ -1,10 +1,10 @@
-package ir.airline.service.abstractFactoryMenu.impl;
+package ir.airline.service.menu.impl;
 
 import ir.airline.domain.Customer;
 import ir.airline.domain.Employee;
 import ir.airline.domain.User;
-import ir.airline.service.abstractFactoryMenu.ProfileMenu;
-import ir.airline.service.abstractFactoryMenu.ProfileMenuAbstractFactory;
+import ir.airline.service.menu.ProfileMenu;
+import ir.airline.service.menu.ProfileMenuAbstractFactory;
 import ir.baseCRUD.domain.enumeration.UserType;
 
 public class ClientApp {

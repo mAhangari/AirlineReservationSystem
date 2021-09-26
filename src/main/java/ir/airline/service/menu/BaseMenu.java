@@ -1,4 +1,4 @@
-package ir.airline.service.abstractFactoryMenu;
+package ir.airline.service.menu;
 
 import java.util.List;
 

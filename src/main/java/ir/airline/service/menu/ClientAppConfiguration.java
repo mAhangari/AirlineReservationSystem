@@ -1,10 +1,10 @@
-package ir.airline.service.abstractFactoryMenu;
+package ir.airline.service.menu;
 
 import ir.airline.domain.Employee;
 import ir.airline.domain.User;
 import ir.airline.domain.enumeration.WorkPlace;
-import ir.airline.service.abstractFactoryMenu.impl.airline.AirlineProfileMenuFactory;
-import ir.airline.service.abstractFactoryMenu.impl.ClientApp;
+import ir.airline.service.menu.impl.airline.AirlineProfileMenuFactory;
+import ir.airline.service.menu.impl.ClientApp;
 import ir.baseCRUD.domain.enumeration.UserType;
 import java.util.*;
 

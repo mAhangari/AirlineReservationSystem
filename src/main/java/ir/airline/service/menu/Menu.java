@@ -1,7 +1,7 @@
-package ir.airline.service.abstractFactoryMenu;
+package ir.airline.service.menu;
 
 import ir.airline.domain.User;
-import ir.airline.service.abstractFactoryMenu.impl.ClientApp;
+import ir.airline.service.menu.impl.ClientApp;
 import ir.airline.util.ApplicationContext;
 import java.util.*;
 

@@ -1,9 +1,9 @@
-package ir.airline.service.abstractFactoryMenu.impl.airline;
+package ir.airline.service.menu.impl.airline;
 
 import ir.airline.domain.Customer;
 import ir.airline.domain.Employee;
-import ir.airline.service.abstractFactoryMenu.ProfileMenu;
-import ir.airline.service.abstractFactoryMenu.ProfileMenuAbstractFactory;
+import ir.airline.service.menu.ProfileMenu;
+import ir.airline.service.menu.ProfileMenuAbstractFactory;
 
 public class AirlineProfileMenuFactory implements ProfileMenuAbstractFactory {
 

@@ -1,8 +1,8 @@
-package ir.airline.service.abstractFactoryMenu.impl.airline;
+package ir.airline.service.menu.impl.airline;
 
 import ir.airline.domain.Employee;
-import ir.airline.service.abstractFactoryMenu.BaseMenu;
-import ir.airline.service.abstractFactoryMenu.ProfileMenu;
+import ir.airline.service.menu.BaseMenu;
+import ir.airline.service.menu.ProfileMenu;
 import ir.airline.util.ApplicationContext;
 import lombok.AccessLevel;
 import lombok.Getter;
