@@ -1,5 +1,6 @@
 package ir.airline.domain;
 
+import ir.baseCRUD.domain.enumeration.UserType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,11 +21,13 @@ public class Customer extends User {
 	private String nationalCode;
 
 	public Customer(String username, String password, String firstName,
-			String lastName) {
+			String lastName, String nationalCode) {
 		super.setUsername(username);
 		super.setPassword(password);
 		super.setFirstName(firstName);
 		super.setLastName(lastName);
+		this.setNationalCode(nationalCode);
+		super.setUserType(UserType.Customer);
 	}
 	
 	@Override
