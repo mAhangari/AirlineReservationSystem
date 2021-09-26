@@ -60,8 +60,8 @@ public class User extends BaseEntity<Long> implements IUser {
     @Column(name = BIRTH_DATE)
     private ZonedDateTime birthDate;
 
-    @Column(name = IS_ACTIVE, nullable = false)
-    private Boolean isActive;
+    @Column(name = IS_ACTIVE)
+    private boolean isActive = true;
 
     @Column(name = LOGGED_IN)
     private boolean loggedIn;
@@ -78,7 +78,7 @@ public class User extends BaseEntity<Long> implements IUser {
 
     @Override
     public void setRevoked(boolean value) {
-        setIsActive(value);
+        setActive(value);
     }
 
     @Override
@@ -88,6 +88,6 @@ public class User extends BaseEntity<Long> implements IUser {
 
     @Override
     public boolean isRevoked() {
-        return !getIsActive();
+        return !isActive();
     }
 }
