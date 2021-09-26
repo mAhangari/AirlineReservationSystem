@@ -8,17 +8,17 @@ import ir.airline.util.LoginServiceContext;
 public class LoginService extends LoginServiceContext {
     private final UserService userService;
 
-    public LoginService(UserService accountRepository) {
+    public LoginService(UserService userService) {
         super(new AwaitingFirstLoginAttempt());
-        this.userService = accountRepository;
+        this.userService = userService;
     }
 
-    public void login(String username, String password) {
+    public User login(String username, String password) {
         User user = userService.findUserByUsername(username);
 
         if (user == null)
             throw new AccountNotFoundException("Account not exists");
 
-        getState().login(this, user, password);
+        return getState().login(this, user, password);
     }
 }
