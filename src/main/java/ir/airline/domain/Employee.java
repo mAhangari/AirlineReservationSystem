@@ -3,11 +3,7 @@ package ir.airline.domain;
 import ir.airline.domain.enumeration.WorkPlace;
 import ir.baseCRUD.domain.enumeration.UserType;
 import lombok.*;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.*;
 
 @Entity
 @Setter
@@ -21,6 +17,9 @@ public class Employee extends User {
     @Setter(AccessLevel.PRIVATE)
     @Enumerated(EnumType.STRING)
     private WorkPlace workPlace;
+
+    @ManyToOne
+    private Airline airline;
 
     public Employee(String username, String password, String firstName, String lastName,
                     String nationalCode, UserType userType, WorkPlace workPlace) {
