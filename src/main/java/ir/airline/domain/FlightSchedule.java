@@ -30,9 +30,22 @@ public class FlightSchedule extends BaseEntity<Long> {
 
     private LocalDateTime flyTime;
 
+    private String price;
+
     @OneToMany(mappedBy = "flightSchedule")
     private Set<Ticket> ticket;
 
     @ManyToOne
     private Airline airline;
+
+    @Override
+    public String toString() {
+        return "FlightSchedule{" +
+                "destination='" + destination + '\'' +
+                ", source='" + source + '\'' +
+                ", airline name='" + airline.getAirlineName() + '\'' +
+                ", flyTime=" + flyTime +
+                ", price='" + price + '\'' +
+                '}';
+    }
 }
