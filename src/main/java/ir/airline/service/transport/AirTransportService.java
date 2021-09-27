@@ -48,8 +48,11 @@ public class AirTransportService implements TransportService {
                     LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);
                     flightSchedule.setFlyTime(localDateTime);
 
-                    BaseMenu.singleSetMessage("insert flight number");
+                    BaseMenu.singleSetMessage("Insert flight number");
                     flightSchedule.setFlightNumber(input.next());
+
+                    BaseMenu.singleSetMessage("Insert flight price");
+                    flightSchedule.setPrice(input.next());
 
                     flightSchedule.setAirline(employee.getAirline());
                     ApplicationContext.flightScheduleServ.save(flightSchedule);
