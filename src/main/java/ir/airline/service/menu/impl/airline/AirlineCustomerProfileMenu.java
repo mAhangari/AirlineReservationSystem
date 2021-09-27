@@ -41,7 +41,6 @@ public class AirlineCustomerProfileMenu implements ProfileMenu {
                                             sourcePlace, destinationPlace);
 
                     showFlightSchedule(flightSchedules);
-
                     sortFlightSchedule(flightSchedules);
 
                     dashboard();
@@ -78,13 +77,9 @@ public class AirlineCustomerProfileMenu implements ProfileMenu {
                             .comparing(a -> a.getAirline().getAirlineName());
                     compareMethod(flightSchedules, comparator);
                 }
-                case 3 -> {
-                    Comparator<FlightSchedule> comparator = Comparator.comparing(FlightSchedule::getSource);
-                    compareMethod(flightSchedules, comparator);
-                }
-                case 4 -> {
-                    Comparator<FlightSchedule> comparator = Comparator.comparing(FlightSchedule::getDestination);
-                    compareMethod(flightSchedules, comparator);
+                case 3, 4 -> {
+                    showFlightSchedule(flightSchedules);
+                    sortFlightSchedule(flightSchedules);
                 }
                 case 5 -> {
                 }
