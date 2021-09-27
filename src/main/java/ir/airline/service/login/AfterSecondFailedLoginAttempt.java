@@ -16,7 +16,6 @@ public class AfterSecondFailedLoginAttempt extends LoginServiceState {
                                         String password) {
         if (previousAccountId.equals(account.getUsername())) {
             account.setRevoked(true);
-            ApplicationContext.userServ.save(account);
             context.setState(new AwaitingFirstLoginAttempt());
         } else {
             context.setState(new AfterFirstFailedLoginAttempt(account.getUsername()));
