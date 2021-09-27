@@ -1,6 +1,6 @@
 package ir.airline.util;
 
-import ir.airline.repository.FlightScheduleRepositoryImpl;
+import ir.airline.repository.impl.FlightScheduleRepositoryImpl;
 import ir.airline.repository.impl.CustomerRepositoryImpl;
 import ir.airline.repository.impl.EmployeeRepositoryImpl;
 import ir.airline.repository.impl.UserRepositoryImpl;
